@@ -135,6 +135,135 @@
 			]
 		},
 		{
+			"name": "SERVICIOS",
+			"item": [
+				{
+					"name": "LISTAR_SERVICIOS",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/servicios",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"servicios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LISTAR_SERVICIO",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/servicios/65a472ee87ae203b8a8d95e3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"servicios",
+								"65a472ee87ae203b8a8d95e3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "REGISTRAR",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Lavado de auto\",\r\n    \"descripcion\": \"Servicio de lavado y limpieza de auto\",\r\n    \"precio\": 75.00,\r\n    \"imagen\": \"https://d3nqlc6zkdn9bc.cloudfront.net/wp-content/uploads/2023/01/19081618/evita-usar-estas-sustancias-al-momento-de-lavar-tu-carro.jpg\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/servicios/registrar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"servicios",
+								"registrar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ACTUALIZAR",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"65a472a887ae203b8a8d95e2\",\r\n    \"nombre\": \"Lavado de Auto\",\r\n    \"descripcion\": \"Servicio de lavado y limpieza de autos en general\",\r\n    \"precio\": 100.0,\r\n    \"imagen\": \"https://d3nqlc6zkdn9bc.cloudfront.net/wp-content/uploads/2023/01/19081618/evita-usar-estas-sustancias-al-momento-de-lavar-tu-carro.jpg\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/servicios/actualizar/65a472a887ae203b8a8d95e2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"servicios",
+								"actualizar",
+								"65a472a887ae203b8a8d95e2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/servicios/eliminar/65a472a887ae203b8a8d95e2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"servicios",
+								"eliminar",
+								"65a472a887ae203b8a8d95e2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
 			"name": "CLIENTES",
 			"item": [
 				{
