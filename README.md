@@ -17,7 +17,7 @@ Esta aplicación de Car Wash es un sistema de gestión integral diseñado para f
 - Base de datos MongoDB
 
 ## Instrucciones de Configuración
-1. Clona el repositorio desde GitHub: `git clone https://github.com/tuusuario/carwash-app.git`
+1. Clona el repositorio desde GitHub: `https://github.com/JostinSamuel/carwash-backend.git`
 2. Configura la base de datos MongoDB y actualiza las credenciales en el archivo `application.properties`.
 3. Abre el proyecto en tu IDE preferido y realiza las configuraciones necesarias para ejecutar la aplicación.
 
