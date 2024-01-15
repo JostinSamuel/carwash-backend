@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "7e899f00-49c7-40d1-8d8d-fade40b86012",
+		"_postman_id": "262d0278-4c87-49e7-a5b9-1e7cd01916a1",
 		"name": "1.1.1 CARWASH BACKEND",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -256,6 +256,135 @@
 								"servicios",
 								"eliminar",
 								"65a472a887ae203b8a8d95e2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "TIPO_VEHICULO",
+			"item": [
+				{
+					"name": "LISTAR_TIPO_VEHICULOS",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/tipoVehiculo",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"tipoVehiculo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LISTAR_TIPO_VEHICULO",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/tipoVehiculo/65a498121cbd71597825b127",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"tipoVehiculo",
+								"65a498121cbd71597825b127"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "REGISTRAR",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"tipoVehiculo\": \"Moto\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/tipoVehiculo/registrar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"tipoVehiculo",
+								"registrar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ACTUALIZAR",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"65a498121cbd71597825b127\",\r\n    \"tipoVehiculo\": \"Moto\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/tipoVehiculo/actualizar/65a498121cbd71597825b127",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"tipoVehiculo",
+								"actualizar",
+								"65a498121cbd71597825b127"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/tipoVehiculo/eliminar/65a498121cbd71597825b127",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"tipoVehiculo",
+								"eliminar",
+								"65a498121cbd71597825b127"
 							]
 						}
 					},
