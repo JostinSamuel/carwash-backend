@@ -15,5 +15,4 @@ public class TipoVehiculo {
 
     public String id;
     public String tipoVehiculo;
-
 }

@@ -1,7 +1,6 @@
 package com.carwash.pe.service;
 
 import com.carwash.pe.repository.VehiculoRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service

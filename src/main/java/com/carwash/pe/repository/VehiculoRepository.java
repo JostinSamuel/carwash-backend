@@ -1,6 +1,5 @@
 package com.carwash.pe.repository;
 
-import com.carwash.pe.model.Usuario;
 import com.carwash.pe.model.Vehiculos;
 import org.springframework.data.repository.reactive.ReactiveCrudRepository;
 import org.springframework.stereotype.Repository;
