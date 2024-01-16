@@ -264,6 +264,135 @@
 			]
 		},
 		{
+			"name": "VEHICULOS",
+			"item": [
+				{
+					"name": "LISTAR_VEHICULOS",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/vehiculos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"vehiculos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LISTAR_VEHICULO",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/vehiculos/65a472ee87ae203b8a8d95e3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"vehiculos",
+								"65a472ee87ae203b8a8d95e3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "REGISTRAR",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"placa\": \"U40-45A\",\r\n    \"marca\": \"Honda\",\r\n    \"modelo\": \"GL 125\",\r\n    \"anio\": 2020,\r\n    \"color\": \"azul\",\r\n    \"infoExtra\": \"Moto con motor malogrado\",\r\n    \"tipoVehiculo\": {\r\n        \"id\": \"65a498581cbd71597825b128\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/vehiculos/registrar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"vehiculos",
+								"registrar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ACTUALIZAR",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"65a605e46056fe6137b9986d\",\r\n    \"placa\": \"U40-4BA\",\r\n    \"marca\": \"Honda\",\r\n    \"modelo\": \"GL 254\",\r\n    \"anio\": 2018,\r\n    \"color\": \"azul\",\r\n    \"infoExtra\": \"Moto con motor descompuesto\",\r\n    \"tipoVehiculo\": {\r\n        \"id\": \"65a498581cbd71597825b128\",\r\n        \"tipoVehiculo\": \"Moto\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/vehiculos/actualizar/65a605e46056fe6137b9986d",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"vehiculos",
+								"actualizar",
+								"65a605e46056fe6137b9986d"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/vehiculos/eliminar/65a602f86056fe6137b9986a",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"vehiculos",
+								"eliminar",
+								"65a602f86056fe6137b9986a"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
 			"name": "TIPO_VEHICULO",
 			"item": [
 				{
@@ -314,7 +443,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"tipoVehiculo\": \"Moto\"\r\n}",
+							"raw": "{\r\n    \"tipoVehiculo\": \"Auto\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"

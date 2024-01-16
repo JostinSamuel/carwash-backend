@@ -1,5 +1,6 @@
 package com.carwash.pe.model;
 
+import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import lombok.AllArgsConstructor;
@@ -13,7 +14,7 @@ import lombok.Setter;
 @AllArgsConstructor
 @Document(collection = "servicios")
 public class Servicio {
-
+    @Id
     private String id;
     private String nombre;
     private String descripcion;
