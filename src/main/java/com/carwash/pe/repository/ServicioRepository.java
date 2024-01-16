@@ -1,10 +1,11 @@
 package com.carwash.pe.repository;
 
-import com.carwash.pe.model.Vehiculo;
 import org.springframework.data.repository.reactive.ReactiveCrudRepository;
 import org.springframework.stereotype.Repository;
 
+import com.carwash.pe.model.Servicio;
+
 @Repository
-public interface VehiculoRepository extends ReactiveCrudRepository<Vehiculo, String>{
+public interface ServicioRepository extends ReactiveCrudRepository<Servicio, String>{
     
 }

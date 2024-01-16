@@ -12,12 +12,12 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-@Document(collection = "usuarios")
-public class Usuario {
+@Document(collection = "servicios")
+public class Servicio {
     @Id
     private String id;
-    private String username;
-    private String password;
-    private String email;
-    private String role;
+    private String nombre;
+    private String descripcion;
+    private Double precio;
+    private String imagen;
 }

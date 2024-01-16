@@ -1,8 +1,9 @@
 package com.carwash.pe.service;
 
+import org.springframework.stereotype.Service;
+
 import com.carwash.pe.model.TipoVehiculo;
 import com.carwash.pe.repository.TipoVehiculoRepository;
-import org.springframework.stereotype.Service;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
@@ -27,9 +28,13 @@ public class TipoVehiculoService {
         return tipoVehiculoRepository.save(tipoVehiculo);
     }
 
-    public Mono<TipoVehiculo> updateTipoVehiculo (String id){
-        return tipoVehiculoRepository.findById(id)
-                .flatMap(tipo -> tipoVehiculoRepository.save(tipo));
+    public Mono<TipoVehiculo> actualizarTipoVehiculo(TipoVehiculo tipoVehiculo) {
+        return tipoVehiculoRepository.findById(tipoVehiculo.getId())
+                .flatMap(tipoVehiculoActualizado -> {
+                    tipoVehiculoActualizado.setId(tipoVehiculo.getId());
+                    tipoVehiculoActualizado.setTipoVehiculo(tipoVehiculo.getTipoVehiculo());
+                    return tipoVehiculoRepository.save(tipoVehiculoActualizado);
+                });
     }
 
     public Mono<Void> eliminarTipoVehiculo(String id){

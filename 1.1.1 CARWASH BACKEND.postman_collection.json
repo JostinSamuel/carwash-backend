@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "7e899f00-49c7-40d1-8d8d-fade40b86012",
+		"_postman_id": "262d0278-4c87-49e7-a5b9-1e7cd01916a1",
 		"name": "1.1.1 CARWASH BACKEND",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -127,6 +127,522 @@
 								"usuarios",
 								"eliminar",
 								"65a360f6f124c006d0233e94"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "SERVICIOS",
+			"item": [
+				{
+					"name": "LISTAR_SERVICIOS",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/servicios",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"servicios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LISTAR_SERVICIO",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/servicios/65a472ee87ae203b8a8d95e3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"servicios",
+								"65a472ee87ae203b8a8d95e3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "REGISTRAR",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Lavado de auto\",\r\n    \"descripcion\": \"Servicio de lavado y limpieza de auto\",\r\n    \"precio\": 75.00,\r\n    \"imagen\": \"https://d3nqlc6zkdn9bc.cloudfront.net/wp-content/uploads/2023/01/19081618/evita-usar-estas-sustancias-al-momento-de-lavar-tu-carro.jpg\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/servicios/registrar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"servicios",
+								"registrar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ACTUALIZAR",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"65a472a887ae203b8a8d95e2\",\r\n    \"nombre\": \"Lavado de Auto\",\r\n    \"descripcion\": \"Servicio de lavado y limpieza de autos en general\",\r\n    \"precio\": 100.0,\r\n    \"imagen\": \"https://d3nqlc6zkdn9bc.cloudfront.net/wp-content/uploads/2023/01/19081618/evita-usar-estas-sustancias-al-momento-de-lavar-tu-carro.jpg\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/servicios/actualizar/65a472a887ae203b8a8d95e2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"servicios",
+								"actualizar",
+								"65a472a887ae203b8a8d95e2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/servicios/eliminar/65a472a887ae203b8a8d95e2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"servicios",
+								"eliminar",
+								"65a472a887ae203b8a8d95e2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "VEHICULOS",
+			"item": [
+				{
+					"name": "LISTAR_VEHICULOS",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/vehiculos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"vehiculos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LISTAR_VEHICULO",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/vehiculos/65a472ee87ae203b8a8d95e3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"vehiculos",
+								"65a472ee87ae203b8a8d95e3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "REGISTRAR",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"placa\": \"U40-45A\",\r\n    \"marca\": \"Honda\",\r\n    \"modelo\": \"GL 125\",\r\n    \"anio\": 2020,\r\n    \"color\": \"azul\",\r\n    \"infoExtra\": \"Moto con motor malogrado\",\r\n    \"tipoVehiculo\": {\r\n        \"id\": \"65a498581cbd71597825b128\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/vehiculos/registrar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"vehiculos",
+								"registrar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ACTUALIZAR",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"65a605e46056fe6137b9986d\",\r\n    \"placa\": \"U40-4BA\",\r\n    \"marca\": \"Honda\",\r\n    \"modelo\": \"GL 254\",\r\n    \"anio\": 2018,\r\n    \"color\": \"azul\",\r\n    \"infoExtra\": \"Moto con motor descompuesto\",\r\n    \"tipoVehiculo\": {\r\n        \"id\": \"65a498581cbd71597825b128\",\r\n        \"tipoVehiculo\": \"Moto\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/vehiculos/actualizar/65a605e46056fe6137b9986d",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"vehiculos",
+								"actualizar",
+								"65a605e46056fe6137b9986d"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/vehiculos/eliminar/65a602f86056fe6137b9986a",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"vehiculos",
+								"eliminar",
+								"65a602f86056fe6137b9986a"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "TIPO_VEHICULO",
+			"item": [
+				{
+					"name": "LISTAR_TIPO_VEHICULOS",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/tipoVehiculo",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"tipoVehiculo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LISTAR_TIPO_VEHICULO",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/tipoVehiculo/65a498121cbd71597825b127",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"tipoVehiculo",
+								"65a498121cbd71597825b127"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "REGISTRAR",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"tipoVehiculo\": \"Auto\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/tipoVehiculo/registrar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"tipoVehiculo",
+								"registrar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ACTUALIZAR",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"65a498121cbd71597825b127\",\r\n    \"tipoVehiculo\": \"Moto\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/tipoVehiculo/actualizar/65a498121cbd71597825b127",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"tipoVehiculo",
+								"actualizar",
+								"65a498121cbd71597825b127"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/tipoVehiculo/eliminar/65a498121cbd71597825b127",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"tipoVehiculo",
+								"eliminar",
+								"65a498121cbd71597825b127"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "CLIENTES",
+			"item": [
+				{
+					"name": "LISTAR_CLIENTES",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/clientes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"clientes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LISTAR_CLIENTE",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/clientes/65a46af4d0da4a235a165768",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"clientes",
+								"65a46af4d0da4a235a165768"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "REGISTRAR",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Nick\",\r\n    \"apellido\": \"Saurino\",\r\n    \"dni\": \"12345678\",\r\n    \"telefono\": \"987589654\",\r\n    \"direccion\": \"Av. Tunche 123\",\r\n    \"usuario\": {\r\n         \"id\": \"65a36be1f124c006d0233e9c\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/clientes/registrar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"clientes",
+								"registrar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ACTUALIZAR",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"65a46af4d0da4a235a165768\",\r\n    \"nombre\": \"Nick Daniels\",\r\n    \"apellido\": \"Saurino Motupe\",\r\n    \"dni\": \"12345688\",\r\n    \"telefono\": \"987589644\",\r\n    \"direccion\": \"Av. Tunche 123\",\r\n    \"usuario\": {\r\n        \"id\": \"65a36be1f124c006d0233e9c\",\r\n        \"username\": \"empleado\",\r\n        \"password\": \"123456\",\r\n        \"email\": \"empleado123@ejemplo.com\",\r\n        \"role\": \"user\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/clientes/actualizar/65a46af4d0da4a235a165768",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"clientes",
+								"actualizar",
+								"65a46af4d0da4a235a165768"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/clientes/eliminar/65a46af4d0da4a235a165768",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"clientes",
+								"eliminar",
+								"65a46af4d0da4a235a165768"
 							]
 						}
 					},
