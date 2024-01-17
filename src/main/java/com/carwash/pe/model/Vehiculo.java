@@ -20,4 +20,5 @@ public class Vehiculo {
     private String color;
     private String infoExtra;
     private TipoVehiculo tipoVehiculo;
+
 }
