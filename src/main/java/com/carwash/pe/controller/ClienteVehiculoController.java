@@ -1,17 +1,12 @@
 package com.carwash.pe.controller;
 
 import com.carwash.pe.model.ClienteVehiculo;
-import com.carwash.pe.repository.ClienteRepository;
-import com.carwash.pe.repository.ClienteVehiculoRepository;
-import com.carwash.pe.repository.VehiculoRepository;
 import com.carwash.pe.service.ClienteService;
 import com.carwash.pe.service.ClienteVehiculoService;
 import com.carwash.pe.service.VehiculoService;
 import org.springframework.web.bind.annotation.*;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
-
-import javax.websocket.server.PathParam;
 
 @RestController
 @RequestMapping("/clienteVehiculo")
@@ -35,7 +30,7 @@ public class ClienteVehiculoController {
     }
 
     @GetMapping("/{placa}")
-    public Mono<ClienteVehiculo> findByPlaca(@PathParam("placa") Mono<String> placa){
+    public Mono<ClienteVehiculo> findByPlaca(@PathVariable("placa") String placa){
         return clienteVehiculoService.findByPlacado(placa);
     }
 
@@ -44,4 +39,13 @@ public class ClienteVehiculoController {
         return clienteVehiculoService.saveCLienteVehiculo(clienteVehiculo);
     }
 
+    @DeleteMapping("/{placa}")
+    public Mono<Void> deleteClienteVehiculo(@PathVariable("placa") String placa){
+        return clienteVehiculoService.deleteByPlacado(placa);
+    }
+
+    @PutMapping("/{placa}")
+    public Mono<ClienteVehiculo> updateClienteVehiculo(@PathVariable("placa")  String placa, @RequestBody ClienteVehiculo clienteVehiculo){
+        return clienteVehiculoService.updateClienteVehiculoMono(placa, clienteVehiculo);
+    }
 }

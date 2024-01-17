@@ -14,8 +14,12 @@ public class ClienteVehiculo {
     @Id
     private String placa;
 
+    private String detalles;
+
     private Vehiculo vehiculo;
 
     private Cliente cliente;
+
+
 
 }

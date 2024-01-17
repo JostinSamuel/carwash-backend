@@ -9,5 +9,5 @@ import reactor.core.publisher.Mono;
 @Repository
 public interface ClienteVehiculoRepository extends ReactiveCrudRepository<ClienteVehiculo, String>{
 
-    public Mono<ClienteVehiculo> findByPlaca(Mono<String> placa);
+    public Mono<ClienteVehiculo> findByPlaca(String placa);
 }
