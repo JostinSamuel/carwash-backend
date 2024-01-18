@@ -25,14 +25,14 @@ public class ServicioClienteVehiculo {
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private LocalDateTime fecha;
 
-    private EstadoPago estado = EstadoPago.PENDIENTE;
+    private EstadoPago estado;
 
     private String detalles;
 
     private Servicio servicio;
 
-    private ClienteVehiculo clienteVehiculo;
+    private Cliente cliente;
 
-
+    private Vehiculo vehiculo;
     
 }
