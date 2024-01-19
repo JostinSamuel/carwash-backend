@@ -1,9 +1,8 @@
 {
 	"info": {
-		"_postman_id": "d7fb1300-e87a-4c66-a36c-fa3c4f4eb426",
+		"_postman_id": "01079dc4-cde2-4f27-9c51-1b2f365aba0f",
 		"name": "1.1.1 CARWASH BACKEND",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "11126502"
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
 		{
@@ -164,7 +163,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/api/servicios/65a472ee87ae203b8a8d95e3",
+							"raw": "http://localhost:8080/api/servicios/65a9b59d101e881e8ae74dc3",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -173,7 +172,7 @@
 							"path": [
 								"api",
 								"servicios",
-								"65a472ee87ae203b8a8d95e3"
+								"65a9b59d101e881e8ae74dc3"
 							]
 						}
 					},
@@ -315,7 +314,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"placa\": \"U40-45A\",\r\n    \"marca\": \"Honda\",\r\n    \"modelo\": \"GL 125\",\r\n    \"anio\": 2020,\r\n    \"color\": \"azul\",\r\n    \"infoExtra\": \"Moto con motor malogrado\",\r\n    \"tipoVehiculo\": {\r\n        \"id\": \"65a81580d3fd7a0e7a4e1cbb\"\r\n    }\r\n}",
+							"raw": "{\r\n    \"placa\": \"U40-45A\",\r\n    \"marca\": \"Honda\",\r\n    \"modelo\": \"GL 125\",\r\n    \"anio\": 2020,\r\n    \"color\": \"azul\",\r\n    \"infoExtra\": \"Moto con motor malogrado\",\r\n    \"tipoVehiculo\": {\r\n        \"id\": \"65a9b5c2101e881e8ae74dc4\"\r\n    }\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -573,7 +572,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"nombre\": \"Marcos\",\r\n    \"apellido\": \"Basurto\",\r\n    \"dni\": \"72289143\",\r\n    \"telefono\": \"961109826\",\r\n    \"direccion\": \"Av. Santa Rosa 204\",\r\n    \"usuario\": {\r\n         \"id\": \"65a814c8d3fd7a0e7a4e1cb9\"\r\n    }\r\n}",
+							"raw": "{\r\n    \"nombre\": \"Marcos\",\r\n    \"apellido\": \"Basurto\",\r\n    \"dni\": \"72289143\",\r\n    \"telefono\": \"961109826\",\r\n    \"direccion\": \"Av. Santa Rosa 204\",\r\n    \"usuario\": {\r\n         \"id\": \"65a9b58f101e881e8ae74dc2\"\r\n    }\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -661,7 +660,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"placa\": \"123ASD\",\r\n  \"vehiculo\": {\r\n    \"id\":\"65a81588d3fd7a0e7a4e1cbc\"\r\n    },\r\n    \"cliente\":{\r\n        \"id\":\"65a814cfd3fd7a0e7a4e1cba\"\r\n    },\r\n    \"detalles\":\"El auto no prende y necesita un labado de motor con area comp\"\r\n}\r\n",
+							"raw": "{\r\n  \"placa\": \"123ASD\",\r\n  \"vehiculo\": {\r\n    \"id\":\"65a9b5d6101e881e8ae74dc5\"\r\n    },\r\n    \"cliente\":{\r\n        \"id\":\"65a9b61f101e881e8ae74dc6\"\r\n    },\r\n    \"detalles\":\"El auto no prende\"\r\n}\r\n",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -669,7 +668,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/clienteVehiculo/ASD123",
+							"raw": "http://localhost:8080/clienteVehiculo/",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -677,7 +676,7 @@
 							"port": "8080",
 							"path": [
 								"clienteVehiculo",
-								"ASD123"
+								""
 							]
 						}
 					},
@@ -768,6 +767,198 @@
 							"path": [
 								"clienteVehiculo",
 								"123ASD"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FIND_ALL",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/clienteVehiculo/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"clienteVehiculo",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "SERVICIO_CLIENTE_VEHICULO",
+			"item": [
+				{
+					"name": "FIND_ALL",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/servicioClienteVehiculo",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"servicioClienteVehiculo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FIND_BY_ID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/servicioClienteVehiculo/65a9f9071d72aa417a430cf4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"servicioClienteVehiculo",
+								"65a9f9071d72aa417a430cf4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST_SERVICIO_CLIENTE_VEHICULO",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"fecha\": \"2022-01-01 12:00:00\",\r\n    \"estado\": \"PENDIENTE\",\r\n    \"detalles\": \"Detalles del servicio\",\r\n    \"servicio\": {\r\n        \"id\": \"65a9b59d101e881e8ae74dc3\"\r\n    },\r\n    \"vehiculo\": {\r\n        \"id\": \"65a9b5d6101e881e8ae74dc5\"\r\n    },\r\n    \"cliente\": {\r\n        \"id\": \"65a9b61f101e881e8ae74dc6\"\r\n    }\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/servicioClienteVehiculo/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"servicioClienteVehiculo",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"placa\": \"123ASD\",\r\n  \"vehiculo\": {\r\n    \"id\":\"65a81588d3fd7a0e7a4e1cbc\"\r\n    },\r\n    \"cliente\":{\r\n        \"id\":\"65a814cfd3fd7a0e7a4e1cba\"\r\n    }\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/servicioClienteVehiculo/65a9f72a33661f41f582f755",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"servicioClienteVehiculo",
+								"65a9f72a33661f41f582f755"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT CLIENTE VEHICULO",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"65a9f9071d72aa417a430cf4\",\r\n    \"fecha\": \"2022-01-01 12:00:00\",\r\n    \"estado\": \"PAGADO\",\r\n    \"detalles\": \"Servicio completado\",\r\n    \"servicio\": {\r\n        \"id\": \"65a9b59d101e881e8ae74dc3\",\r\n        \"nombre\": \"Lavado de auto\",\r\n        \"descripcion\": \"Servicio de lavado y limpieza de auto\",\r\n        \"precio\": 75.0,\r\n        \"imagen\": \"https://d3nqlc6zkdn9bc.cloudfront.net/wp-content/uploads/2023/01/19081618/evita-usar-estas-sustancias-al-momento-de-lavar-tu-carro.jpg\"\r\n    },\r\n    \"cliente\": {\r\n        \"id\": \"65a9b61f101e881e8ae74dc6\",\r\n        \"nombre\": \"Marcos\",\r\n        \"apellido\": \"Basurto\",\r\n        \"dni\": \"72289143\",\r\n        \"telefono\": \"961109826\",\r\n        \"direccion\": \"Av. Santa Rosa 204\",\r\n        \"usuario\": {\r\n            \"id\": \"65a9b58f101e881e8ae74dc2\",\r\n            \"username\": \"cliente\",\r\n            \"password\": \"123456\",\r\n            \"email\": \"marcosbr301@gmail..com\",\r\n            \"role\": \"user\"\r\n        }\r\n    },\r\n    \"vehiculo\": {\r\n        \"id\": \"65a9b5d6101e881e8ae74dc5\",\r\n        \"placa\": \"U40-45A\",\r\n        \"marca\": \"Honda\",\r\n        \"modelo\": \"GL 125\",\r\n        \"anio\": 2020,\r\n        \"color\": \"azul\",\r\n        \"infoExtra\": \"Moto con motor malogrado\",\r\n        \"tipoVehiculo\": {\r\n            \"id\": \"65a9b5c2101e881e8ae74dc4\",\r\n            \"tipoVehiculo\": \"Moto\"\r\n        }\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/servicioClienteVehiculo/65a9f9071d72aa417a430cf4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"servicioClienteVehiculo",
+								"65a9f9071d72aa417a430cf4"
 							]
 						}
 					},
