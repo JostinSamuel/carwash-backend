@@ -1,5 +1,6 @@
 package com.carwash.pe.service;
 
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -16,21 +17,13 @@ import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 @Service
+@RequiredArgsConstructor
 public class ServicioClienteVehiculoService {
 
-    private ServicioClienteVehiculoRepository servicioClienteVehiculoRepository;
-    private ServicioRepository servicioRepository;
-    private ClienteRepository clienteRepository;
-    private VehiculoRepository vehiculoRepository;
-
-    public ServicioClienteVehiculoService(ServicioClienteVehiculoRepository servicioClienteVehiculoRepository,
-            ServicioRepository servicioRepository, ClienteRepository clienteRepository,
-            VehiculoRepository vehiculoRepository) {
-        this.servicioClienteVehiculoRepository = servicioClienteVehiculoRepository;
-        this.servicioRepository = servicioRepository;
-        this.clienteRepository = clienteRepository;
-        this.vehiculoRepository = vehiculoRepository;
-    }
+    private final ServicioClienteVehiculoRepository servicioClienteVehiculoRepository;
+    private final ServicioRepository servicioRepository;
+    private final ClienteRepository clienteRepository;
+    private final VehiculoRepository vehiculoRepository;
 
     public Flux<ServicioClienteVehiculo> findAllServicioClienteVehiculo() {
         return servicioClienteVehiculoRepository.findAll();

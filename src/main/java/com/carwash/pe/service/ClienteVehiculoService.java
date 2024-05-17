@@ -6,6 +6,7 @@ import com.carwash.pe.model.Vehiculo;
 import com.carwash.pe.repository.ClienteRepository;
 import com.carwash.pe.repository.ClienteVehiculoRepository;
 import com.carwash.pe.repository.VehiculoRepository;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import reactor.core.publisher.Flux;
@@ -13,18 +14,12 @@ import reactor.core.publisher.Mono;
 
 
 @Service
+@RequiredArgsConstructor
 public class ClienteVehiculoService {
 
-    private ClienteVehiculoRepository clienteVehiculoRepository;
-    private ClienteRepository clienteRepository;
-    private VehiculoRepository vehiculoRepository;
-    public ClienteVehiculoService(ClienteVehiculoRepository clienteVehiculoRepository,
-                                  ClienteRepository clienteRepository,
-                                    VehiculoRepository vehiculoRepository){
-        this.clienteVehiculoRepository = clienteVehiculoRepository;
-        this.clienteRepository =  clienteRepository;
-        this.vehiculoRepository =  vehiculoRepository;
-    }
+    private final ClienteVehiculoRepository clienteVehiculoRepository;
+    private final ClienteRepository clienteRepository;
+    private final VehiculoRepository vehiculoRepository;
 
     public Flux<ClienteVehiculo> findAllClienteVehiculos(){
         return clienteVehiculoRepository.findAll();
@@ -34,11 +29,11 @@ public class ClienteVehiculoService {
         return clienteVehiculoRepository.findById(id);
     }
 
-    public Mono<ClienteVehiculo> findByPlacado(String placa){
+    public Mono<ClienteVehiculo> findByPlaca(String placa){
         return clienteVehiculoRepository.findByPlaca(placa);
     }
 
-    public Mono<ClienteVehiculo> saveCLienteVehiculo(ClienteVehiculo clienteVe){
+    public Mono<ClienteVehiculo> saveClienteVehiculo(ClienteVehiculo clienteVe){
 
         Mono<Cliente> monoCliente = clienteRepository.findById(clienteVe.getCliente().getId());
 

@@ -1,28 +1,18 @@
 package com.carwash.pe.controller;
 
 import com.carwash.pe.model.ClienteVehiculo;
-import com.carwash.pe.service.ClienteService;
 import com.carwash.pe.service.ClienteVehiculoService;
-import com.carwash.pe.service.VehiculoService;
+import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
+@RequiredArgsConstructor
 @RestController
 @RequestMapping("/api/clienteVehiculo")
 public class ClienteVehiculoController {
 
-    private ClienteVehiculoService clienteVehiculoService;
-    private ClienteService clienteService;
-    private VehiculoService vehiculoService;
-
-    public ClienteVehiculoController(ClienteVehiculoService clienteVehiculoService,
-                                     ClienteService clienteService,
-                                     VehiculoService vehiculoService){
-        this.clienteService = clienteService;
-        this.clienteVehiculoService = clienteVehiculoService;
-        this.vehiculoService = vehiculoService;
-    }
+    private final ClienteVehiculoService clienteVehiculoService;
 
     @GetMapping("/")
     public Flux<ClienteVehiculo> findAllClienteVehiculos() {
@@ -31,12 +21,12 @@ public class ClienteVehiculoController {
 
     @GetMapping("/{placa}")
     public Mono<ClienteVehiculo> findByPlaca(@PathVariable("placa") String placa){
-        return clienteVehiculoService.findByPlacado(placa);
+        return clienteVehiculoService.findByPlaca(placa);
     }
 
     @PostMapping("/")
     public Mono<ClienteVehiculo> insertClienteVehiculo(@RequestBody ClienteVehiculo clienteVehiculo){
-        return clienteVehiculoService.saveCLienteVehiculo(clienteVehiculo);
+        return clienteVehiculoService.saveClienteVehiculo(clienteVehiculo);
     }
 
     @DeleteMapping("/{placa}")

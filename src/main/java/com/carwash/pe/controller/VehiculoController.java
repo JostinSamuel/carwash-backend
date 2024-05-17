@@ -1,5 +1,6 @@
 package com.carwash.pe.controller;
 
+import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -19,13 +20,10 @@ import reactor.core.publisher.Mono;
 
 @RestController
 @RequestMapping("/api/vehiculos")
+@RequiredArgsConstructor
 public class VehiculoController {
     
     private final VehiculoService vehiculoService;
-
-    public VehiculoController(VehiculoService vehiculoService) {
-        this.vehiculoService = vehiculoService;
-    }
 
     @GetMapping
     public ResponseEntity<Flux<Vehiculo>> listarVehiculos() {
