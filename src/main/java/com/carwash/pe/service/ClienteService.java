@@ -1,5 +1,6 @@
 package com.carwash.pe.service;
 
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import com.carwash.pe.model.Cliente;
@@ -11,15 +12,11 @@ import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 @Service
+@RequiredArgsConstructor
 public class ClienteService {
     
-    private ClienteRepository clienteRepository;
-    private UsuarioRepository usuarioRepository;
-    
-    public ClienteService(ClienteRepository clienteRepository, UsuarioRepository usuarioRepository) {
-        this.clienteRepository = clienteRepository;
-        this.usuarioRepository = usuarioRepository;
-    }
+    private final ClienteRepository clienteRepository;
+    private final UsuarioRepository usuarioRepository;
     
     public Flux<Cliente> listarClientes() {
         return clienteRepository.findAll();

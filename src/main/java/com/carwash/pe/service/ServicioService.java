@@ -1,5 +1,6 @@
 package com.carwash.pe.service;
 
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import com.carwash.pe.model.Servicio;
@@ -9,13 +10,10 @@ import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 @Service
+@RequiredArgsConstructor
 public class ServicioService {
     
-    private ServicioRepository servicioRepository;
-
-    public ServicioService(ServicioRepository servicioRepository) {
-        this.servicioRepository = servicioRepository;
-    }
+    private final ServicioRepository servicioRepository;
 
     public Flux<Servicio> listarServicios() {
         return servicioRepository.findAll();

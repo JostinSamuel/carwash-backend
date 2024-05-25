@@ -1,5 +1,6 @@
 package com.carwash.pe.service;
 
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import com.carwash.pe.model.Usuario;
@@ -9,15 +10,10 @@ import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 @Service
+@RequiredArgsConstructor
 public class UsuarioService {
     
-    //implementar metodos para listar, insertar, actualizar y eliminar usuarios desde la clase UsuarioRepository
-    
-    private UsuarioRepository usuarioRepository;
-    
-    public UsuarioService(UsuarioRepository usuarioRepository) {
-        this.usuarioRepository = usuarioRepository;
-    }
+    private final UsuarioRepository usuarioRepository;
     
     public Flux<Usuario> listarUsuarios() {
         return usuarioRepository.findAll();

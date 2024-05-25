@@ -1,5 +1,6 @@
 package com.carwash.pe.controller;
 
+import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -13,13 +14,10 @@ import reactor.core.publisher.Mono;
 @CrossOrigin(origins = "http://localhost:4200")
 @RestController
 @RequestMapping("/api/servicios")
+@RequiredArgsConstructor
 public class ServicioController {
 
     private final ServicioService servicioService;
-
-    public ServicioController(ServicioService servicioService) {
-        this.servicioService = servicioService;
-    }
 
     @GetMapping
     public ResponseEntity<Flux<Servicio>> listarServicios() {

@@ -3,21 +3,18 @@ package com.carwash.pe.service;
 import com.carwash.pe.model.Vehiculo;
 import com.carwash.pe.repository.TipoVehiculoRepository;
 import com.carwash.pe.repository.VehiculoRepository;
+import lombok.RequiredArgsConstructor;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 import org.springframework.stereotype.Service;
 
 @Service
+@RequiredArgsConstructor
 public class VehiculoService {
 
-    private VehiculoRepository vehiculoRepository;
-    private TipoVehiculoRepository tipoVehiculoRepository;
-
-    public VehiculoService (VehiculoRepository vehiculoRepository, TipoVehiculoRepository tipoVehiculoRepository) {
-        this.vehiculoRepository=vehiculoRepository;
-        this.tipoVehiculoRepository=tipoVehiculoRepository;
-    }
+    private final VehiculoRepository vehiculoRepository;
+    private final TipoVehiculoRepository tipoVehiculoRepository;
 
     public Flux<Vehiculo> listarVehiculos() {
         return vehiculoRepository.findAll();

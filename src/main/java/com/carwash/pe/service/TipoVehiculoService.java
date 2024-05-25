@@ -1,5 +1,6 @@
 package com.carwash.pe.service;
 
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import com.carwash.pe.model.TipoVehiculo;
@@ -8,13 +9,10 @@ import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 @Service
+@RequiredArgsConstructor
 public class TipoVehiculoService {
 
-    private TipoVehiculoRepository tipoVehiculoRepository;
-
-    public TipoVehiculoService(TipoVehiculoRepository tipoVehiculoRepository){
-        this.tipoVehiculoRepository=tipoVehiculoRepository;
-    }
+    private final TipoVehiculoRepository tipoVehiculoRepository;
 
     public Flux<TipoVehiculo> findAllTipos(){
         return tipoVehiculoRepository.findAll();
@@ -24,7 +22,7 @@ public class TipoVehiculoService {
         return tipoVehiculoRepository.findById(id);
     }
 
-    public Mono<TipoVehiculo> NewTipoVehiculo (TipoVehiculo tipoVehiculo){
+    public Mono<TipoVehiculo> newTipoVehiculo (TipoVehiculo tipoVehiculo){
         return tipoVehiculoRepository.save(tipoVehiculo);
     }
 
