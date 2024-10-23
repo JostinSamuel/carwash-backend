@@ -11,10 +11,10 @@ import com.carwash.pe.service.ClienteService;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
+@CrossOrigin(origins = "http://localhost:4200")
 @RestController
 @RequestMapping("/api/clientes")
 @RequiredArgsConstructor
-@CrossOrigin(origins = "http://localhost:4200") // Permite solicitudes desde el puerto 4200
 public class ClienteController {
     
     private final ClienteService clienteService;

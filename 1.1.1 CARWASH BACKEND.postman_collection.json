@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "01079dc4-cde2-4f27-9c51-1b2f365aba0f",
+		"_postman_id": "dd13167a-a8a0-4534-9169-a95988c90d34",
 		"name": "1.1.1 CARWASH BACKEND",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -56,7 +56,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"username\": \"cliente\",\r\n    \"password\": \"123456\",\r\n    \"email\": \"marcosbr301@gmail..com\",\r\n    \"role\": \"user\"\r\n}",
+							"raw": "{\r\n    \"username\": \"admin\",\r\n    \"password\": \"admin\",\r\n    \"role\": \"admin\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -116,7 +116,7 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/api/usuarios/eliminar/65a360f6f124c006d0233e94",
+							"raw": "http://localhost:8080/api/usuarios/eliminar/65a36be1f124c006d0233e9c",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -126,7 +126,7 @@
 								"api",
 								"usuarios",
 								"eliminar",
-								"65a360f6f124c006d0233e94"
+								"65a36be1f124c006d0233e9c"
 							]
 						}
 					},
@@ -572,7 +572,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"nombre\": \"Marcos\",\r\n    \"apellido\": \"Basurto\",\r\n    \"dni\": \"72289143\",\r\n    \"telefono\": \"961109826\",\r\n    \"direccion\": \"Av. Santa Rosa 204\",\r\n    \"usuario\": {\r\n         \"id\": \"65a9b58f101e881e8ae74dc2\"\r\n    }\r\n}",
+							"raw": "{\r\n    \"nombre\": \"Jostin\",\r\n    \"apellido\": \"Martinez\",\r\n    \"dni\": \"72289143\",\r\n    \"telefono\": \"961109826\",\r\n    \"direccion\": \"Av. Santa Rosa 204\",\r\n    \"email\": \"jostin@gmail.com\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -602,7 +602,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"id\": \"65a46af4d0da4a235a165768\",\r\n    \"nombre\": \"Nick Daniels\",\r\n    \"apellido\": \"Saurino Motupe\",\r\n    \"dni\": \"12345688\",\r\n    \"telefono\": \"987589644\",\r\n    \"direccion\": \"Av. Tunche 123\",\r\n    \"usuario\": {\r\n        \"id\": \"65a36be1f124c006d0233e9c\",\r\n        \"username\": \"empleado\",\r\n        \"password\": \"123456\",\r\n        \"email\": \"empleado123@ejemplo.com\",\r\n        \"role\": \"user\"\r\n    }\r\n}",
+							"raw": "{\r\n    \"id\": \"67184598dd0d0657dc1d608d\",\r\n    \"nombre\": \"Nick dsfdsfsdfsd\",\r\n    \"apellido\": \"Saurino Motupe\",\r\n    \"dni\": \"12345688\",\r\n    \"telefono\": \"987589644\",\r\n    \"direccion\": \"Av. Tunche 123\",\r\n    \"email\": \"empleado123@ejemplo.com\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -610,7 +610,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/api/clientes/actualizar/65a46af4d0da4a235a165768",
+							"raw": "http://localhost:8080/api/clientes/actualizar/67184598dd0d0657dc1d608d",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -620,7 +620,7 @@
 								"api",
 								"clientes",
 								"actualizar",
-								"65a46af4d0da4a235a165768"
+								"67184598dd0d0657dc1d608d"
 							]
 						}
 					},
@@ -632,7 +632,7 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/api/clientes/eliminar/65a46af4d0da4a235a165768",
+							"raw": "http://localhost:8080/api/clientes/eliminar/65a46aa0d0da4a235a165767",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -642,7 +642,7 @@
 								"api",
 								"clientes",
 								"eliminar",
-								"65a46af4d0da4a235a165768"
+								"65a46aa0d0da4a235a165767"
 							]
 						}
 					},
@@ -660,7 +660,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"placa\": \"123ASD\",\r\n  \"vehiculo\": {\r\n    \"id\":\"65a9b5d6101e881e8ae74dc5\"\r\n    },\r\n    \"cliente\":{\r\n        \"id\":\"65a9b61f101e881e8ae74dc6\"\r\n    },\r\n    \"detalles\":\"El auto no prende\"\r\n}\r\n",
+							"raw": "{\r\n  \"placa\": \"123ASD\",\r\n  \"vehiculo\": {\r\n    \"id\":\"65a605096056fe6137b9986c\"\r\n    },\r\n    \"cliente\":{\r\n        \"id\":\"65a467dcd0da4a235a165763\"\r\n    },\r\n    \"detalles\":\"El auto no prende\"\r\n}\r\n",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -668,13 +668,14 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/clienteVehiculo/",
+							"raw": "http://localhost:8080/api/clienteVehiculo/",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "8080",
 							"path": [
+								"api",
 								"clienteVehiculo",
 								""
 							]
@@ -790,13 +791,14 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/clienteVehiculo/",
+							"raw": "http://localhost:8080/api/clienteVehiculo/",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "8080",
 							"path": [
+								"api",
 								"clienteVehiculo",
 								""
 							]
@@ -965,6 +967,41 @@
 					"response": []
 				}
 			]
+		},
+		{
+			"name": "http://localhost:8080/api/blobs/copy?sourceContainerName=attachment-template&destinationContainerName=cc-sale-orders&blobName=silabo.pdf",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/blobs/copy?sourceContainerName=attachment-template&destinationContainerName=cc-sale-orders&blobName=silabo.pdf",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"blobs",
+						"copy"
+					],
+					"query": [
+						{
+							"key": "sourceContainerName",
+							"value": "attachment-template"
+						},
+						{
+							"key": "destinationContainerName",
+							"value": "cc-sale-orders"
+						},
+						{
+							"key": "blobName",
+							"value": "silabo.pdf"
+						}
+					]
+				}
+			},
+			"response": []
 		}
 	]
 }

@@ -2,12 +2,10 @@ package com.carwash.pe.service;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-
 import com.carwash.pe.model.Cliente;
-import com.carwash.pe.model.Usuario;
 import com.carwash.pe.repository.ClienteRepository;
-import com.carwash.pe.repository.UsuarioRepository;
-
+import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Service;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
@@ -16,8 +14,7 @@ import reactor.core.publisher.Mono;
 public class ClienteService {
     
     private final ClienteRepository clienteRepository;
-    private final UsuarioRepository usuarioRepository;
-    
+  
     public Flux<Cliente> listarClientes() {
         return clienteRepository.findAll();
     }
@@ -27,14 +24,7 @@ public class ClienteService {
     }
     
     public Mono<Cliente> insertarCliente(Cliente cliente) {
-        Mono<Usuario> usuarioMono = cliente.getUsuario().getId() == null ? 
-            usuarioRepository.save(cliente.getUsuario()) : 
-            usuarioRepository.findById(cliente.getUsuario().getId());
-    
-        return usuarioMono.flatMap(usuario -> {
-            cliente.setUsuario(usuario);
-            return clienteRepository.save(cliente);
-        });
+        return clienteRepository.save(cliente);
     }
 
     public Mono<Cliente> actualizarCliente(Cliente cliente) {
@@ -46,7 +36,6 @@ public class ClienteService {
                     clienteActualizado.setDni(cliente.getDni());
                     clienteActualizado.setTelefono(cliente.getTelefono());
                     clienteActualizado.setDireccion(cliente.getDireccion());
-                    clienteActualizado.setUsuario(cliente.getUsuario());
                     return clienteRepository.save(clienteActualizado);
                 });
     }

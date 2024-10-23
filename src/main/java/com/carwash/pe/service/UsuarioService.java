@@ -33,7 +33,6 @@ public class UsuarioService {
                     usuarioActualizado.setId(usuario.getId());
                     usuarioActualizado.setUsername(usuario.getUsername());
                     usuarioActualizado.setPassword(usuario.getPassword());
-                    usuarioActualizado.setEmail(usuario.getEmail());
                     usuarioActualizado.setRole(usuario.getRole());
                     return usuarioRepository.save(usuarioActualizado);
                 });
